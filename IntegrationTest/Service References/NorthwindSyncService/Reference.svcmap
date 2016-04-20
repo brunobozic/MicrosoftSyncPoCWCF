@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="18b1cdc8-7809-43f1-b394-aca8df28be88" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:58188/SyncService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SyncService.xsd" MetadataType="Schema" ID="64032089-a9cf-4289-be06-5da7fb9c511d" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SyncService1.xsd" MetadataType="Schema" ID="585351fc-0e79-443a-85ec-3a9a70c2af91" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SyncService2.xsd" MetadataType="Schema" ID="f5c11134-80ca-4649-bea5-bdf63bc30515" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SyncService3.xsd" MetadataType="Schema" ID="a9855ced-7ce9-4ec5-995d-8e283880d597" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd7" />
+    <MetadataFile FileName="SyncService4.xsd" MetadataType="Schema" ID="7a33f487-790e-46e6-832b-c678b0deb49a" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd8" />
+    <MetadataFile FileName="SyncService5.xsd" MetadataType="Schema" ID="99caea0a-c795-4d3f-8cae-2c6da552150f" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SyncService6.xsd" MetadataType="Schema" ID="fc4726a1-e209-438c-8b38-418cce2389c9" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd9" />
+    <MetadataFile FileName="SyncService.wsdl" MetadataType="Wsdl" ID="3e886a47-98af-4fc4-93bb-79b323201074" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?wsdl" />
+    <MetadataFile FileName="SyncService7.xsd" MetadataType="Schema" ID="4675ada8-bf79-46be-8799-b728d616f249" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SyncService8.xsd" MetadataType="Schema" ID="2e73808e-5450-4d9e-94ee-b0b5102958e3" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SyncService.disco" MetadataType="Disco" ID="6afb04de-ed88-4773-aa3c-8d664fd64c19" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?disco" />
+    <MetadataFile FileName="SyncService9.xsd" MetadataType="Schema" ID="62054727-cd0c-4e53-b2d8-23282267aa4e" SourceId="1" SourceUrl="http://localhost:58188/SyncService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

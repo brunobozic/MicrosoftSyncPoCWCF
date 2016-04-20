@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SyncService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_ISyncService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsrm:RMAssertion xmlns:wsrm="http://schemas.xmlsoap.org/ws/2005/02/rm/policy">
+          <wsrm:InactivityTimeout Milliseconds="1800000" />
+          <wsrm:AcknowledgementInterval Milliseconds="200" />
+        </wsrm:RMAssertion>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd8" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd0" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd1" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Synchronization.Data" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd2" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Microsoft.Synchronization" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd4" namespace="http://schemas.microsoft.com/2009/04/sync/" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/MicrosoftSyncPoC.Infrastructure" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd7" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd9" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISyncService_Initialize_InputMessage">
+    <wsdl:part name="parameters" element="tns:Initialize" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_Initialize_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InitializeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetScopeDescription_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetScopeDescription" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetScopeDescription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetScopeDescriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_BeginSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:BeginSession" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_BeginSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BeginSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetKnowledge_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetKnowledge" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetKnowledge_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetKnowledgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetChanges" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_GetChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_ApplyChanges_InputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyChanges" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_ApplyChanges_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ApplyChangesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_HasUploadedBatchFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:HasUploadedBatchFile" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_HasUploadedBatchFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HasUploadedBatchFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_UploadBatchFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:UploadBatchFile" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_UploadBatchFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UploadBatchFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_DownloadBatchFile_InputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadBatchFile" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_DownloadBatchFile_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DownloadBatchFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_EndSession_InputMessage">
+    <wsdl:part name="parameters" element="tns:EndSession" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_EndSession_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EndSessionResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_Cleanup_InputMessage">
+    <wsdl:part name="parameters" element="tns:Cleanup" />
+  </wsdl:message>
+  <wsdl:message name="ISyncService_Cleanup_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CleanupResponse" />
+  </wsdl:message>
+  <wsdl:portType msc:usingSession="true" name="ISyncService">
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="Initialize">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/Initialize" message="tns:ISyncService_Initialize_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/InitializeResponse" message="tns:ISyncService_Initialize_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetScopeDescription">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/GetScopeDescription" message="tns:ISyncService_GetScopeDescription_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/GetScopeDescriptionResponse" message="tns:ISyncService_GetScopeDescription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="BeginSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/BeginSession" message="tns:ISyncService_BeginSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/BeginSessionResponse" message="tns:ISyncService_BeginSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetKnowledge">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/GetKnowledge" message="tns:ISyncService_GetKnowledge_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/GetKnowledgeResponse" message="tns:ISyncService_GetKnowledge_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="GetChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/GetChanges" message="tns:ISyncService_GetChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/GetChangesResponse" message="tns:ISyncService_GetChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="ApplyChanges">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/ApplyChanges" message="tns:ISyncService_ApplyChanges_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/ApplyChangesResponse" message="tns:ISyncService_ApplyChanges_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="HasUploadedBatchFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/HasUploadedBatchFile" message="tns:ISyncService_HasUploadedBatchFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/HasUploadedBatchFileResponse" message="tns:ISyncService_HasUploadedBatchFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="UploadBatchFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/UploadBatchFile" message="tns:ISyncService_UploadBatchFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/UploadBatchFileResponse" message="tns:ISyncService_UploadBatchFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="DownloadBatchFile">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/DownloadBatchFile" message="tns:ISyncService_DownloadBatchFile_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/DownloadBatchFileResponse" message="tns:ISyncService_DownloadBatchFile_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="false" name="EndSession">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/EndSession" message="tns:ISyncService_EndSession_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/EndSessionResponse" message="tns:ISyncService_EndSession_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation msc:isInitiating="true" msc:isTerminating="true" name="Cleanup">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISyncService/Cleanup" message="tns:ISyncService_Cleanup_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISyncService/CleanupResponse" message="tns:ISyncService_Cleanup_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_ISyncService" type="tns:ISyncService">
+    <wsp:PolicyReference URI="#WSHttpBinding_ISyncService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Initialize">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/Initialize" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetScopeDescription">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/GetScopeDescription" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BeginSession">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/BeginSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetKnowledge">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/GetKnowledge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetChanges">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/GetChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ApplyChanges">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/ApplyChanges" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HasUploadedBatchFile">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/HasUploadedBatchFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UploadBatchFile">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/UploadBatchFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DownloadBatchFile">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/DownloadBatchFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EndSession">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/EndSession" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cleanup">
+      <soap12:operation soapAction="http://tempuri.org/ISyncService/Cleanup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SyncService">
+    <wsdl:port name="WSHttpBinding_ISyncService" binding="tns:WSHttpBinding_ISyncService">
+      <soap12:address location="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc</wsa10:Address>
+        <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
+          <Dns>localhost</Dns>
+        </Identity>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

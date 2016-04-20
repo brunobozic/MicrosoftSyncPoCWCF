@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="f6654b4f-f0a9-418c-a49b-8dd420ae198c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SyncService10.xsd" MetadataType="Schema" ID="e21d53d4-f254-4aeb-a915-efccea4d5769" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SyncService101.xsd" MetadataType="Schema" ID="1979e63f-2a3f-44cd-9a41-9883185b0929" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SyncService102.xsd" MetadataType="Schema" ID="071e4951-9f32-4c46-84dc-b6dadd8a68aa" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SyncService103.xsd" MetadataType="Schema" ID="b60fc8ed-cfdf-45c5-b80f-66d2153ffa9a" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd5" />
+    <MetadataFile FileName="SyncService1.disco" MetadataType="Disco" ID="10d4da94-f7f5-45cf-90bd-c21b6a80ae9f" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?disco" />
+    <MetadataFile FileName="SyncService104.xsd" MetadataType="Schema" ID="d727dd85-648c-4ac8-8f10-6db5d72ff770" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd9" />
+    <MetadataFile FileName="SyncService105.xsd" MetadataType="Schema" ID="7449482d-ed73-41e6-ab88-52075f15f098" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SyncService1.wsdl" MetadataType="Wsdl" ID="4caaa0a8-3fd6-4e0f-a2c2-0058b93e597b" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?wsdl" />
+    <MetadataFile FileName="SyncService106.xsd" MetadataType="Schema" ID="caa0a941-8ad1-4745-85f2-c528c58204c6" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd8" />
+    <MetadataFile FileName="SyncService107.xsd" MetadataType="Schema" ID="611143c8-7df3-497c-aafe-78a328870deb" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SyncService108.xsd" MetadataType="Schema" ID="3392b3a7-68b1-4ad8-a581-7df6cccc54b6" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd7" />
+    <MetadataFile FileName="SyncService109.xsd" MetadataType="Schema" ID="8f96f168-1c1f-4a81-ac37-6a07a46a37d5" SourceId="1" SourceUrl="http://localhost/MicrosoftSyncPoC.WCF/SyncService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="MicrosoftSyncPoC.EF.Client.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="DbConnection" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=KINGDEVLAP36\MSSQLSERVER12;Initial Catalog=northwind_guid_client;Integrated Security=True;MultipleActiveResultSets=True</Value>
+    </Setting>
+    <Setting Name="northwind_guid_clientContext" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Data Source=KINGDEVLAP36\MSSQLSERVER12;Initial Catalog=northwind_guid_client;Integrated Security=True;MultipleActiveResultSets=True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
