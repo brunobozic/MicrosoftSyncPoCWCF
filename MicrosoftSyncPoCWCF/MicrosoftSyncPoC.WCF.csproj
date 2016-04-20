@@ -107,11 +107,11 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\Users\bruno.bozic\Documents\Visual Studio 2013\Projects\SyncToolkitSourceCode\tools\SyncSvcUtilUI\SyncSvcUtilUI.csproj">
+    <ProjectReference Include="..\SyncToolkit\SyncSvcUtilUI\SyncSvcUtilUI.csproj">
       <Project>{128210c9-e7b0-4d2e-984e-b473aa401188}</Project>
       <Name>SyncSvcUtilUI</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\..\..\..\Users\bruno.bozic\Documents\Visual Studio 2013\Projects\SyncToolkitSourceCode\tools\SyncSvcUtil\SyncSvcUtil.csproj">
+    <ProjectReference Include="..\SyncToolkit\SyncSvcUtil\SyncSvcUtil.csproj">
       <Project>{d592cc46-92ea-44a9-a5be-97e9ca319b47}</Project>
       <Name>SyncSvcUtil</Name>
     </ProjectReference>

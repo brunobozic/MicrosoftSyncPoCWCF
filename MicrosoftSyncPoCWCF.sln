@@ -15,9 +15,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftSyncPoC.ServerSide
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SyncToolkit", "SyncToolkit", "{E83192B9-467B-4DF2-AA68-90FC7998847E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncSvcUtilUI", "..\..\..\..\Users\bruno.bozic\Documents\Visual Studio 2013\Projects\SyncToolkitSourceCode\tools\SyncSvcUtilUI\SyncSvcUtilUI.csproj", "{128210C9-E7B0-4D2E-984E-B473AA401188}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncSvcUtilUI", "SyncToolkit\SyncSvcUtilUI\SyncSvcUtilUI.csproj", "{128210C9-E7B0-4D2E-984E-B473AA401188}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncSvcUtil", "..\..\..\..\Users\bruno.bozic\Documents\Visual Studio 2013\Projects\SyncToolkitSourceCode\tools\SyncSvcUtil\SyncSvcUtil.csproj", "{D592CC46-92EA-44A9-A5BE-97E9CA319B47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SyncSvcUtil", "SyncToolkit\SyncSvcUtil\SyncSvcUtil.csproj", "{D592CC46-92EA-44A9-A5BE-97E9CA319B47}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftSyncPoC.Client.EF", "MicrosoftSyncPoC.EF.Client\MicrosoftSyncPoC.Client.EF.csproj", "{75ED4CA3-82C2-4AC6-8743-D5A4BCF4217F}"
 EndProject
@@ -28,8 +28,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MicrosoftSyncPoC.Client.WPF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SyncConfigs", "SyncConfigs", "{5D428696-AF4F-4385-A5D4-430D9DDA7EEF}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Users\bruno.bozic\Desktop\SyncConfigClient.config = ..\..\..\..\Users\bruno.bozic\Desktop\SyncConfigClient.config
-		..\..\..\..\Users\bruno.bozic\Desktop\SyncConfigServer.config = ..\..\..\..\Users\bruno.bozic\Desktop\SyncConfigServer.config
+		SyncConfigs\SyncConfigClient.config = SyncConfigs\SyncConfigClient.config
+		SyncConfigs\SyncConfigServer.config = SyncConfigs\SyncConfigServer.config
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{BF49BE39-2DB8-425F-82B7-FE0168788D4D}"
@@ -37,7 +37,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTest", "IntegrationTest\IntegrationTest.csproj", "{33B56289-6A57-4739-9894-382CDF65D642}"
 EndProject
 Global
-	
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms
