@@ -3,6 +3,7 @@ using System.IO;
 using System.ServiceModel;
 using Microsoft.Synchronization;
 using Microsoft.Synchronization.Data;
+using MicrosoftSyncPoC.Client.WPF.SyncService;
 using SyncServiceInterface;
 
 
